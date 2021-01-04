@@ -1,20 +1,20 @@
-# Macropad
+# Twelvekey
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-### Simple mechanical top-mount macropad case
+### Simple top-mount mechanical macropad case
 
 <img src="render.png" alt="render" width="800"/>
 
 ---
 
-[STEP](pad.step)
+[STEP](twelvekey.step)
 
-[FBX (for rendering)](pad.fbx)
+[FBX (for rendering)](twelvekey.fbx)
 
-[DXF platefile](pad_plate.dxf)
+[DXF platefile](twelvekey_plate.dxf)
 
-[Technical drawings](pad_drawing.pdf)
+[Technical drawings](twelvekey_drawing.pdf)
 
 ---
 

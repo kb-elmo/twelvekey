@@ -7,14 +7,14 @@
       "Application": "Pcbnew",
       "Version":     "(5.1.9)-1"
     },
-    "CreationDate":  "2021-01-04T19:41:53+01:00"
+    "CreationDate":  "2021-01-04T22:22:52+01:00"
   },
   "GeneralSpecs":
   {
     "ProjectId":
     {
-      "Name": "pcb",
-      "GUID": "7063622e-6b69-4636-9164-5f7063625858",
+      "Name": "twelvekey",
+      "GUID": "7477656c-7665-46b6-9579-2e6b69636164",
       "Revision": "rev?"
     },
     "Size":
@@ -40,47 +40,47 @@
   "FilesAttributes":
   [
     {
-      "Path":  "pcb-F_Cu.gbr",
+      "Path":  "twelvekey-F_Cu.gbr",
       "FileFunction":  "Copper,L1,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "pcb-B_Cu.gbr",
+      "Path":  "twelvekey-B_Cu.gbr",
       "FileFunction":  "Copper,L2,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "pcb-F_Paste.gbr",
+      "Path":  "twelvekey-F_Paste.gbr",
       "FileFunction":  "SolderPaste,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "pcb-B_Paste.gbr",
+      "Path":  "twelvekey-B_Paste.gbr",
       "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "pcb-F_SilkS.gbr",
+      "Path":  "twelvekey-F_SilkS.gbr",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "pcb-B_SilkS.gbr",
+      "Path":  "twelvekey-B_SilkS.gbr",
       "FileFunction":  "Legend,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "pcb-F_Mask.gbr",
+      "Path":  "twelvekey-F_Mask.gbr",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "pcb-B_Mask.gbr",
+      "Path":  "twelvekey-B_Mask.gbr",
       "FileFunction":  "SolderMask,Bot",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "pcb-Edge_Cuts.gbr",
+      "Path":  "twelvekey-Edge_Cuts.gbr",
       "FileFunction":  "Profile",
       "FilePolarity":  "Positive"
     }

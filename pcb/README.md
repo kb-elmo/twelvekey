@@ -1,4 +1,4 @@
-# Pad PCB
+# Twelvekey PCB
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
@@ -8,9 +8,9 @@
 
 ---
 
-[LCSC BOM](pcb.csv)
+[LCSC BOM](twelvekey.csv)
 
-[JLC CPL](pcb-bottom-pos.csv)
+[JLC CPL](twelvekey-bottom-pos.csv)
 
 [USB port](https://lcsc.com/product-detail/USB-Type-C_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.html)
 
