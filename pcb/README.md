@@ -16,8 +16,7 @@
 
 ---
 
-<img src="https://i.imgur.com/QAvwqOs.png" alt="drawing" width="300"/>
-<img src="https://i.imgur.com/Wg3S6Mm.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/QAvwqOs.png" alt="drawing" width="400"/><img src="https://i.imgur.com/Wg3S6Mm.png" alt="drawing" width="400"/>
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
