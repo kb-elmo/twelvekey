@@ -947,8 +947,8 @@ Text GLabel 4450 8200 2    50   Input ~ 0
 col0
 Text GLabel 4450 8400 2    50   Input ~ 0
 col1
-Text GLabel 4450 7300 2    50   Input ~ 0
+Text GLabel 4450 7400 2    50   Input ~ 0
 col2
-Text GLabel 4450 7200 2    50   Input ~ 0
+Text GLabel 4450 7300 2    50   Input ~ 0
 col3
 $EndSCHEMATC
