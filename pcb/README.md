@@ -8,9 +8,9 @@
 
 ---
 
-[LCSC BOM](pad.csv)
+[LCSC BOM](pcb.csv)
 
-[JLC CPL](pad-bottom-pos.csv)
+[JLC CPL](pcb-bottom-pos.csv)
 
 [USB port](https://lcsc.com/product-detail/USB-Type-C_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.html)
 
