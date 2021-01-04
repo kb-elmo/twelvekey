@@ -16,7 +16,7 @@
 
 ---
 
-<img src="https://i.imgur.com/tdFiw3z.png" alt="drawing" width="400"/><img src="https://i.imgur.com/7wh3k0O.png" alt="drawing" width="400"/>
+<img src="pcb_front.png" alt="drawing" width="400"/><img src="pcb_back.png" alt="drawing" width="400"/>
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
