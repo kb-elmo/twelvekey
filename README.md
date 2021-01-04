@@ -4,6 +4,8 @@
 
 ### Simple mechanical top-mount macropad case
 
+<img src="render.png" alt="render" width="800"/>
+
 ---
 
 [STEP](pad.step)
