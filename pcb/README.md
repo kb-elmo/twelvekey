@@ -4,7 +4,7 @@
 
 ### Atmega328p based macropad PCB
 
-<img src="https://i.imgur.com/r4b58u9.png" alt="render" width="800"/>
+<img src="https://i.imgur.com/VcC79Ws.png" alt="render" width="800"/>
 
 ---
 
@@ -16,7 +16,7 @@
 
 ---
 
-<img src="https://i.imgur.com/QAvwqOs.png" alt="drawing" width="400"/><img src="https://i.imgur.com/Wg3S6Mm.png" alt="drawing" width="400"/>
+<img src="https://i.imgur.com/tdFiw3z.png" alt="drawing" width="400"/><img src="https://i.imgur.com/7wh3k0O.png" alt="drawing" width="400"/>
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].

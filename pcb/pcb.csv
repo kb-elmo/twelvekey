@@ -11,7 +11,7 @@ Comment,Designator,Footprint,LCSC
 "5.1k","R5,R6","Resistor_SMD:R_0805_2012Metric","C27834"
 "68R","R7,R8","Resistor_SMD:R_0805_2012Metric","C17802"
 "1.5K","R9","Resistor_SMD:R_0805_2012Metric","C4310"
-"SW_Push","RESET1,BOOT1","random-keyboard-parts:SKQG-1155865","C318884"
+"SW_Push","RESET,BOOT","random-keyboard-parts:SKQG-1155865","C318884"
 "ATmega328P-AU","U1","Package_QFP:TQFP-32_7x7mm_P0.8mm","C14877"
 "SRV05-4","U2","Package_TO_SOT_SMD:SOT-23-6","C85364"
 "USB_C_Receptacle_USB2.0","USB1","Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",""
