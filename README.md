@@ -4,7 +4,7 @@
 
 ### Simple top-mount mechanical macropad case
 
-<img src="render.png" alt="render" width="800"/>
+<img src="render_exploded.png" alt="render" width="800"/>
 
 ---
 
@@ -18,8 +18,8 @@
 
 ---
 
-<img src="https://i.imgur.com/9Ai4E8b.png" alt="render" width="800"/>
-<img src="https://i.imgur.com/yx7ZFpB.png" alt="render" width="800"/>
+<img src="render_front.png" alt="render" width="800"/>
+<img src="render_back.png" alt="render" width="800"/>
 
 ---
 
