@@ -1,4 +1,4 @@
-19303907406977541
+19305518177196209
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -83776,12 +83776,12 @@ MXOnly-1.25U-flipped-LED
 4
 4
 custom_parts
-MXOnly-1U-NoLED
+MXOnly-1U_RGB
 
 
 0
-2
-2
+6
+4
 custom_parts
 MXOnly-2U-NoLED-NoStabilizer
 
@@ -83810,6 +83810,13 @@ MXOnly-ISO-ReversedStabilizers-NoLED
 0
 2
 2
+custom_parts
+SK6812MINIE-simple
+https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf
+LED RGB NeoPixel Mini
+0
+4
+4
 custom_parts
 elmo
 
