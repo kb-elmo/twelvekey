@@ -8,6 +8,8 @@
 
 ---
 
+[Files for 3D printing](print/)
+
 [STEP](twelvekey.step)
 
 [FBX (for rendering)](twelvekey.fbx)
