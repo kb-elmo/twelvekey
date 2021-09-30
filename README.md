@@ -1,27 +1,28 @@
 # Twelvekey
 
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]<a href="https://ko-fi.com/kb_elmo"><img src="https://i.imgur.com/9T0bvqO.png" alt="kofibadge" align="right"/></a>
 
-### Simple top-mount mechanical macropad case
+### Simple 12-key mechanical macropad case
 
-<img src="render_exploded.png" alt="render" width="800"/>
-
----
-
-[Files for 3D printing](print/)
-
-[STEP](twelvekey.step)
-
-[FBX (for rendering)](twelvekey.fbx)
-
-[DXF platefile](twelvekey_plate.dxf)
-
-[Technical drawings](twelvekey_drawing.pdf)
+<img src="https://i.imgur.com/59sSO8k.jpg" alt="front_view" width="800"/>
 
 ---
 
-<img src="render_front.png" alt="render" width="800"/>
-<img src="render_back.png" alt="render" width="800"/>
+[STEP files for the case](case/)
+
+[KiCAD PCB files](pcb/)
+
+[Gerbers for PCB production](pcb/gerbers/)
+
+[JLCPCB BOM](pcb/fab/twelvekey_bom_jlc.csv)
+
+[JLCPCB CPL](pcb/fab/twelvekey_cpl_jlc.csv)
+
+[Vial-QMK firmware](firmware/)
+
+---
+
+<img src="https://i.imgur.com/RWHi4zo.jpg" alt="back_view" width="800"/>
 
 ---
 
