@@ -2,7 +2,7 @@
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]<a href="https://ko-fi.com/kb_elmo"><img src="https://i.imgur.com/9T0bvqO.png" alt="kofibadge" align="right"/></a>
 
-### Simple 12-key mechanical macropad case
+### Simple 12-key mechanical macropad
 
 <img src="https://i.imgur.com/59sSO8k.jpg" alt="front_view" width="800"/>
 
