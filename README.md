@@ -18,7 +18,7 @@
 
 [JLCPCB CPL](pcb/fab/twelvekey_cpl_jlc.csv)
 
-[Vial-QMK firmware](firmware/)
+[Vial-QMK firmware](firmware/vial-qmk)
 
 ---
 
