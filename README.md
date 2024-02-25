@@ -12,7 +12,7 @@
 
 [KiCAD PCB files](pcb/)
 
-[Gerbers for PCB production](pcb/gerbers/)
+[Gerbers for PCB production](pcb/fab/twelvekey.zip)
 
 [JLCPCB BOM](pcb/fab/twelvekey_bom_jlc.csv)
 
