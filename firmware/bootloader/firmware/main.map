@@ -96,9 +96,9 @@ Discarded input sections
 Memory Configuration
 
 Name             Origin             Length             Attributes
-text             0x0000000000000000 0x0000000000020000 xr
-data             0x0000000000800060 0x000000000000ffa0 rw !x
-eeprom           0x0000000000810000 0x0000000000010000 rw !x
+text             0x0000000000000000 0x0000000000008000 xr
+data             0x0000000000800100 0x0000000000000800 rw !x
+eeprom           0x0000000000810000 0x0000000000000400 rw !x
 fuse             0x0000000000820000 0x0000000000000003 rw !x
 lock             0x0000000000830000 0x0000000000000400 rw !x
 signature        0x0000000000840000 0x0000000000000400 rw !x
@@ -121,10 +121,10 @@ LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a
 LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libatmega328p.a
 END GROUP
                 0x0000000000000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
-                0x0000000000800060                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
-                0x0000000000020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
-                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
-                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x0000000000008000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x0000000000000800]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x0000000000000400]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
                 [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
                 0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
                 0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
@@ -427,9 +427,9 @@ END GROUP
  .stab          0x0000000000000d50     0x1140 main.o
                                        0x132c (size before relaxing)
 
-.stabstr        0x0000000000000000     0x1613
+.stabstr        0x0000000000000000     0x161a
  *(.stabstr)
- .stabstr       0x0000000000000000     0x1613 usbdrv/usbdrvasm.o
+ .stabstr       0x0000000000000000     0x161a usbdrv/usbdrvasm.o
 
 .stab.excl
  *(.stab.excl)

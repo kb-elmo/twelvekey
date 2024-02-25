@@ -92,7 +92,7 @@ SYMBOL TABLE:
 0000715a g     F .text	00000000 __vector_1
 00800111 g     O .bss	0000000b usbTxBuf
 00000000 g       *ABS*	00000000 nullVector
-0000ffa0 g       *ABS*	00000000 __DATA_REGION_LENGTH__
+00000800 g       *ABS*	00000000 __DATA_REGION_LENGTH__
 00000000 g       *ABS*	00000000 __TEXT_REGION_ORIGIN__
 00007086 g       .text	00000000 __trampolines_start
 0000788c g       .text	00000000 _etext
@@ -140,7 +140,7 @@ SYMBOL TABLE:
 00800106 g       .bss	00000000 __bss_start
 0000741e g     F .text	0000043e main
 00007126  w      .text	00000000 __vector_4
-00800060 g       *ABS*	00000000 __DATA_REGION_ORIGIN__
+00800100 g       *ABS*	00000000 __DATA_REGION_ORIGIN__
 00800101 g     O .data	00000001 usbTxLen
 00000000  w      *ABS*	00000000 __heap_end
 00007126  w      .text	00000000 __vector_9
@@ -160,7 +160,7 @@ SYMBOL TABLE:
 00007888  w      .text	00000000 .hidden exit
 00800123 g     O .bss	00000001 usbCurrentTok
 000070aa g     O .text	0000000e usbDescriptorStringDevice
-00010000 g       *ABS*	00000000 __EEPROM_REGION_LENGTH__
+00000400 g       *ABS*	00000000 __EEPROM_REGION_LENGTH__
 00007888 g       .text	00000000 .hidden _exit
 00800124 g     O .bss	00000001 usbConfiguration
 00007126  w      .text	00000000 __vector_14
@@ -170,7 +170,7 @@ SYMBOL TABLE:
 00800100 g       .data	00000000 __data_start
 00007126  w      .text	00000000 __vector_18
 00000003 g       *ABS*	00000000 __FUSE_REGION_LENGTH__
-00020000 g       *ABS*	00000000 __TEXT_REGION_LENGTH__
+00008000 g       *ABS*	00000000 __TEXT_REGION_LENGTH__
 00007126  w      .text	00000000 __vector_20
 
 
@@ -1175,7 +1175,7 @@ defined (__AVR_ATmega2561__)
     73c0:	e0 e0       	ldi	r30, 0x00	; 0
     73c2:	f0 e0       	ldi	r31, 0x00	; 0
     73c4:	89 e0       	ldi	r24, 0x09	; 9
-    73c6:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7e0057>
+    73c6:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f8057>
     73ca:	84 91       	lpm	r24, Z
     73cc:	08 95       	ret
   }else if(rq->wValue.bytes[0] == 0x58 && rq->wValue.bytes[1] == 0x08){  /* read hfuse bits */
@@ -1273,7 +1273,7 @@ static inline void  bootLoaderInit(void)
     PIN_DDR(JUMPER_PORT)  = 0;
     741e:	1a b8       	out	0x0a, r1	; 10
     PIN_PORT(JUMPER_PORT) = (1<< PIN(JUMPER_PORT, JUMPER_BIT)); /* activate pull-up */
-    7420:	80 e2       	ldi	r24, 0x20	; 32
+    7420:	80 e1       	ldi	r24, 0x10	; 16
     7422:	8b b9       	out	0x0b, r24	; 11
     /* initialize  */
     bootLoaderInit();
@@ -1320,7 +1320,7 @@ static inline bool bootLoaderCondition(void)
     _mydelay_ms(HAVE_BOOTLOADER_ADDITIONALMSDEVICEWAIT);
 #endif
     if(bootLoaderCondition()){
-    7448:	4d 9b       	sbis	0x09, 5	; 9
+    7448:	4c 9b       	sbis	0x09, 4	; 9
     744a:	0c c0       	rjmp	.+24     	; 0x7464 <_mywait_sleeploop156+0x34>
 }
 #else
@@ -1342,7 +1342,7 @@ static inline void  bootLoaderExit(void)
     USB_INTR_ENABLE = 0;
     7452:	1d ba       	out	0x1d, r1	; 29
     USB_INTR_CFG = 0;       /* also reset config bits */
-    7454:	10 92 69 00 	sts	0x0069, r1	; 0x800069 <__DATA_REGION_ORIGIN__+0x9>
+    7454:	10 92 69 00 	sts	0x0069, r1	; 0x800069 <__TEXT_REGION_LENGTH__+0x7f8069>
     GICR = (1 << IVCE);     /* enable change of interrupt vectors */
     7458:	81 e0       	ldi	r24, 0x01	; 1
     745a:	85 bf       	out	0x35, r24	; 53
@@ -1381,10 +1381,10 @@ static inline void  bootLoaderExit(void)
     746c:	0f b6       	in	r0, 0x3f	; 63
     746e:	f8 94       	cli
     7470:	a8 95       	wdr
-    7472:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+    7472:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__TEXT_REGION_LENGTH__+0x7f8060>
     7476:	88 61       	ori	r24, 0x18	; 24
-    7478:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
-    747c:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+    7478:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__TEXT_REGION_LENGTH__+0x7f8060>
+    747c:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__TEXT_REGION_LENGTH__+0x7f8060>
     7480:	0f be       	out	0x3f, r0	; 63
 /* ------------------------------------------------------------------------- */
 
@@ -1392,9 +1392,9 @@ USB_PUBLIC void usbInit(void)
 {
 #if USB_INTR_CFG_SET != 0
     USB_INTR_CFG |= USB_INTR_CFG_SET;
-    7482:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <__DATA_REGION_ORIGIN__+0x9>
+    7482:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <__TEXT_REGION_LENGTH__+0x7f8069>
     7486:	82 60       	ori	r24, 0x02	; 2
-    7488:	80 93 69 00 	sts	0x0069, r24	; 0x800069 <__DATA_REGION_ORIGIN__+0x9>
+    7488:	80 93 69 00 	sts	0x0069, r24	; 0x800069 <__TEXT_REGION_LENGTH__+0x7f8069>
 #endif
 #if USB_INTR_CFG_CLR != 0
     USB_INTR_CFG &= ~(USB_INTR_CFG_CLR);
@@ -1822,7 +1822,7 @@ uchar   *dataPtr = usbTxBuf + 9;    /* there are 2 bytes free space at the end o
                 replyLen = rq->wLength.word;
         }
         usbMsgLen = replyLen;
-    7630:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+    7630:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
     7634:	7a c0       	rjmp	.+244    	; 0x772a <_mywait_sleeploop231+0x294>
     }else{  /* usbRxToken must be USBPID_OUT, which means data phase of setup (control-out) */
 #if USB_CFG_IMPLEMENT_FN_WRITE
@@ -1902,7 +1902,7 @@ uchar   i,isLast;
     769e:	39 91       	ld	r19, Y+
     76a0:	81 e0       	ldi	r24, 0x01	; 1
     76a2:	09 01       	movw	r0, r18
-    76a4:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7e0057>
+    76a4:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f8057>
     76a8:	e8 95       	spm
     76aa:	11 24       	eor	r1, r1
 	sei();
@@ -1939,7 +1939,7 @@ uchar   i,isLast;
     76e2:	f0 91 0e 01 	lds	r31, 0x010E	; 0x80010e <currentAddress+0x1>
     76e6:	32 97       	sbiw	r30, 0x02	; 2
     76e8:	83 e0       	ldi	r24, 0x03	; 3
-    76ea:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7e0057>
+    76ea:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f8057>
     76ee:	e8 95       	spm
 	    sei();
     76f0:	78 94       	sei
@@ -1958,7 +1958,7 @@ uchar   i,isLast;
     76fe:	f0 91 0e 01 	lds	r31, 0x010E	; 0x80010e <currentAddress+0x1>
     7702:	32 97       	sbiw	r30, 0x02	; 2
     7704:	85 e0       	ldi	r24, 0x05	; 5
-    7706:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7e0057>
+    7706:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f8057>
     770a:	e8 95       	spm
 	    sei();
     770c:	78 94       	sei
@@ -1970,7 +1970,7 @@ uchar   i,isLast;
     7714:	f8 94       	cli
 	    boot_rww_enable();
     7716:	81 e1       	ldi	r24, 0x11	; 17
-    7718:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7e0057>
+    7718:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f8057>
     771c:	e8 95       	spm
 	    sei();
     771e:	78 94       	sei
@@ -1982,7 +1982,7 @@ uchar   i,isLast;
     7722:	01 11       	cpse	r16, r1
     7724:	02 c0       	rjmp	.+4      	; 0x772a <_mywait_sleeploop231+0x294>
                 usbMsgLen = 0;  /* answer with a zero-sized data packet */
-    7726:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+    7726:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
         usbProcessRx(usbRxBuf + USB_BUFSIZE + 1 - usbInputBufOffset, len);
 #if USB_CFG_HAVE_FLOWCONTROL
         if(usbRxLen > 0)    /* only mark as available if not inactivated */
@@ -1997,7 +1997,7 @@ uchar   i,isLast;
     7732:	84 ff       	sbrs	r24, 4
     7734:	67 c0       	rjmp	.+206    	; 0x7804 <_mywait_sleeploop231+0x36e>
         if(usbMsgLen != USB_NO_MSG){    /* transmit data pending? */
-    7736:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+    7736:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
     773a:	8f 3f       	cpi	r24, 0xFF	; 255
     773c:	09 f4       	brne	.+2      	; 0x7740 <_mywait_sleeploop231+0x2aa>
     773e:	62 c0       	rjmp	.+196    	; 0x7804 <_mywait_sleeploop231+0x36e>
@@ -2012,7 +2012,7 @@ uchar       len;
         wantLen = 8;
     usbMsgLen -= wantLen;
     7748:	8c 1b       	sub	r24, r28
-    774a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+    774a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
     usbTxBuf[0] ^= USBPID_DATA0 ^ USBPID_DATA1; /* DATA toggling */
     774e:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <usbTxBuf>
     7752:	88 e8       	ldi	r24, 0x88	; 136
@@ -2172,7 +2172,7 @@ uchar   i;
     77f8:	19 f0       	breq	.+6      	; 0x7800 <_mywait_sleeploop231+0x36a>
             usbMsgLen = USB_NO_MSG;
     77fa:	8f ef       	ldi	r24, 0xFF	; 255
-    77fc:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+    77fc:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
     }else{
         len = USBPID_STALL;   /* stall the endpoint */
         usbMsgLen = USB_NO_MSG;
@@ -2223,7 +2223,7 @@ uchar   i;
     781c:	80 31       	cpi	r24, 0x10	; 16
     781e:	30 f0       	brcs	.+12     	; 0x782c <_mywait_sleeploop231+0x396>
 	  if (!bootLoaderConditionSimple()) {
-    7820:	4d 9b       	sbis	0x09, 5	; 9
+    7820:	4c 9b       	sbis	0x09, 4	; 9
     7822:	0f c0       	rjmp	.+30     	; 0x7842 <_mywait_sleeploop231+0x3ac>
 	    stayinloader-=0x10;
     7824:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <stayinloader>
@@ -2232,7 +2232,7 @@ uchar   i;
 	  } 
 	} else {
 	  if (bootLoaderConditionSimple()) {
-    782c:	4d 99       	sbic	0x09, 5	; 9
+    782c:	4c 99       	sbic	0x09, 4	; 9
     782e:	09 c0       	rjmp	.+18     	; 0x7842 <_mywait_sleeploop231+0x3ac>
 	    if (stayinloader > 1) stayinloader-=2;
     7830:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <stayinloader>
